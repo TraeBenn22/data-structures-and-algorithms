@@ -128,8 +128,14 @@ const snorlaxAbilities = {
   weight: 4600,
 };
 
+function abilityExtractor(item) {
+  return item.ability.name;
+}
 const extractAbilities = (arr) => {
-    return arr.map(item => item.ability.name );
+    // return arr.map(item => item.ability.name );
+    return arr.map( function (item) {
+      return item.ability.name;
+    });
 };
 
 
